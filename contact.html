@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SolveForce | Get in Touch</title>
+    <meta name="description" content="Contact SolveForce for enterprise telecommunications and IT solutions. Call (888) 765-8301 or email contact@solveforce.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .header-phone:hover {
+            color: #764ba2;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #667eea; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .page-header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-header p { font-size: 1.2rem; color: #666; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .contact-card h3 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .contact-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-card p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .contact-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .contact-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .info-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .info-section h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .info-item {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+        }
+        .info-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .info-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+        .hours-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .contact-info { margin-top: 1rem; }
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🌐 SolveForce Portal</a>
+            <a href="tel:+18887658301" class="header-phone">📞 (888) 765-8301</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="pillars.html">Five Pillars</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📞 Contact Us</h1>
+            <p>Get in touch with our team of telecommunications and IT experts</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">📞</div>
+                <h3>Call Us</h3>
+                <p>Speak directly with our experts</p>
+                <p style="font-size: 1.5rem; font-weight: 700; color: #667eea;">(888) 765-8301</p>
+                <p style="font-size: 0.9rem; color: #888;">Available 24/7 for support</p>
+                <a href="tel:+18887658301">Call Now</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Email Us</h3>
+                <p>Send us your questions or requests</p>
+                <p style="font-size: 1.2rem; font-weight: 600; color: #667eea;">contact@solveforce.com</p>
+                <p style="font-size: 0.9rem; color: #888;">We respond within 24 hours</p>
+                <a href="mailto:contact@solveforce.com">Send Email</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📚</div>
+                <h3>Documentation</h3>
+                <p>Explore our comprehensive guides</p>
+                <p style="font-size: 0.9rem; color: #888;">Self-service resources available</p>
+                <a href="https://solveforceapp.github.io/SOLVEFORCE.COM/">View Docs</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🕐 Support Hours</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Our team is available to assist you with expert support and guidance</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📞 Phone Support</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span><span>24/7</span></li>
+                        <li><span>Saturday - Sunday</span><span>24/7</span></li>
+                        <li><span>Holidays</span><span>24/7</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-item">
+                    <h4>📧 Email Support</h4>
+                    <p>Email support is monitored 24/7. Response times:</p>
+                    <ul class="hours-list">
+                        <li><span>Critical Issues</span><span>< 1 hour</span></li>
+                        <li><span>High Priority</span><span>< 4 hours</span></li>
+                        <li><span>Standard</span><span>< 24 hours</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-item">
+                    <h4>💼 Sales Inquiries</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span><span>8 AM - 8 PM ET</span></li>
+                        <li><span>Saturday</span><span>10 AM - 4 PM ET</span></li>
+                        <li><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🎯 Quick Links</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>🔍 Check Fiber Availability</h4>
+                    <p>Find out if high-speed fiber is available at your location</p>
+                    <a href="fiber-availability.html" style="display: inline-block; color: #667eea; text-decoration: none; margin-top: 0.5rem; font-weight: 600;">Check Availability →</a>
+                </div>
+
+                <div class="info-item">
+                    <h4>📋 Request a Quote</h4>
+                    <p>Get a custom quote for your specific needs</p>
+                    <a href="mailto:contact@solveforce.com?subject=Quote Request" style="display: inline-block; color: #667eea; text-decoration: none; margin-top: 0.5rem; font-weight: 600;">Request Quote →</a>
+                </div>
+
+                <div class="info-item">
+                    <h4>🛠️ View Services</h4>
+                    <p>Explore our comprehensive service offerings</p>
+                    <a href="services.html" style="display: inline-block; color: #667eea; text-decoration: none; margin-top: 0.5rem; font-weight: 600;">View Services →</a>
+                </div>
+
+                <div class="info-item">
+                    <h4>🏭 Industry Solutions</h4>
+                    <p>Find solutions tailored to your industry</p>
+                    <a href="industries.html" style="display: inline-block; color: #667eea; text-decoration: none; margin-top: 0.5rem; font-weight: 600;">Explore Industries →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section" style="text-align: center;">
+            <h2>📬 Additional Contact Options</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Choose the method that works best for you</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>🎫 Support Tickets</h4>
+                    <p>For existing customers with technical issues</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Email: support@solveforce.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>💼 Sales Team</h4>
+                    <p>For new service inquiries and quotes</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Email: sales@solveforce.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>🤝 Partnerships</h4>
+                    <p>For partnership and reseller opportunities</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Email: partners@solveforce.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2 style="color: white;">�� Ready to Get Started?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 2rem;">Our team is standing by to help transform your business with enterprise-grade solutions</p>
+            <a href="tel:+18887658301" style="background: white; color: #667eea; display: inline-block; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 0.5rem;">📞 Call (888) 765-8301</a>
+            <a href="mailto:contact@solveforce.com" style="background: rgba(255,255,255,0.2); border: 2px solid white; color: white; display: inline-block; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 0.5rem;">📧 Send Email</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SolveForce. Enterprise Telecommunications & IT Solutions.</p>
+        <div class="contact-info">
+            <a href="tel:+18887658301">📞 (888) 765-8301</a>
+            <a href="mailto:contact@solveforce.com">📧 contact@solveforce.com</a>
+            <a href="https://solveforceapp.github.io/SOLVEFORCE.COM/">📖 Documentation</a>
+        </div>
+    </footer>
+</body>
+</html>

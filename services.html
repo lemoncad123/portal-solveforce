@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SolveForce Portal</title>
+    <meta name="description" content="Comprehensive telecommunications and IT services including connectivity, cloud, security, and AI solutions.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .header-phone:hover {
+            color: #764ba2;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .services-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-title h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                display: none;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🌐 SolveForce Portal</a>
+            <a href="tel:+18887658301" class="header-phone">📞 (888) 765-8301</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="pillars.html">Five Pillars</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>🛠️ Our Services</h1>
+            <p>Comprehensive telecommunications and IT solutions for modern enterprises</p>
+        </div>
+
+        <!-- Telecommunications Services -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>📞 Telecommunications Services</h2>
+                <p>Enterprise-grade voice and data communication solutions</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>VoIP Solutions</h3>
+                    <p>Cloud-based voice communication systems</p>
+                    <ul>
+                        <li>Hosted PBX systems</li>
+                        <li>SIP trunking</li>
+                        <li>Call center solutions</li>
+                        <li>Mobile integration</li>
+                        <li>Auto-attendant</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Unified Communications (UCaaS)</h3>
+                    <p>Integrated communication platforms</p>
+                    <ul>
+                        <li>Voice, video, messaging</li>
+                        <li>Team collaboration</li>
+                        <li>Presence management</li>
+                        <li>Mobile apps</li>
+                        <li>Desktop integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Contact Center Solutions</h3>
+                    <p>Advanced customer engagement platforms</p>
+                    <ul>
+                        <li>Omnichannel support</li>
+                        <li>IVR systems</li>
+                        <li>Call recording</li>
+                        <li>Analytics & reporting</li>
+                        <li>AI-powered routing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Internet & Connectivity -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>🌐 Internet & Connectivity</h2>
+                <p>High-speed, reliable connectivity solutions</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Fiber Optic Internet</h3>
+                    <p>Ultra-fast symmetrical connectivity</p>
+                    <ul>
+                        <li>Up to 100 Gbps speeds</li>
+                        <li>Dedicated bandwidth</li>
+                        <li>Low latency</li>
+                        <li>99.99% uptime SLA</li>
+                        <li>Scalable capacity</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>SD-WAN</h3>
+                    <p>Software-defined wide area networking</p>
+                    <ul>
+                        <li>Multi-site connectivity</li>
+                        <li>Intelligent routing</li>
+                        <li>Application prioritization</li>
+                        <li>Cost optimization</li>
+                        <li>Centralized management</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>MPLS Networks</h3>
+                    <p>Private, secure network infrastructure</p>
+                    <ul>
+                        <li>QoS guarantees</li>
+                        <li>Any-to-any connectivity</li>
+                        <li>Traffic engineering</li>
+                        <li>Predictable performance</li>
+                        <li>Carrier-class reliability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud Services -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>☁️ Cloud Services</h2>
+                <p>Flexible, scalable cloud infrastructure and applications</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Infrastructure as a Service (IaaS)</h3>
+                    <p>Virtual computing resources on demand</p>
+                    <ul>
+                        <li>Virtual machines</li>
+                        <li>Storage solutions</li>
+                        <li>Network infrastructure</li>
+                        <li>Disaster recovery</li>
+                        <li>Backup services</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Platform as a Service (PaaS)</h3>
+                    <p>Development and deployment platforms</p>
+                    <ul>
+                        <li>Application hosting</li>
+                        <li>Database services</li>
+                        <li>Development tools</li>
+                        <li>API management</li>
+                        <li>Container orchestration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Software as a Service (SaaS)</h3>
+                    <p>Ready-to-use cloud applications</p>
+                    <ul>
+                        <li>Productivity suites</li>
+                        <li>CRM systems</li>
+                        <li>ERP solutions</li>
+                        <li>Collaboration tools</li>
+                        <li>Business analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>🔒 Cybersecurity Services</h2>
+                <p>Comprehensive security solutions to protect your business</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Managed Security Services</h3>
+                    <p>24/7 security monitoring and response</p>
+                    <ul>
+                        <li>SOC as a Service</li>
+                        <li>Threat detection</li>
+                        <li>Incident response</li>
+                        <li>Security analytics</li>
+                        <li>Compliance reporting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Network Security</h3>
+                    <p>Protect your network infrastructure</p>
+                    <ul>
+                        <li>Next-gen firewalls</li>
+                        <li>Intrusion prevention</li>
+                        <li>DDoS protection</li>
+                        <li>VPN services</li>
+                        <li>Network segmentation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Endpoint Protection</h3>
+                    <p>Secure all devices and endpoints</p>
+                    <ul>
+                        <li>Anti-malware</li>
+                        <li>EDR solutions</li>
+                        <li>Mobile device management</li>
+                        <li>Patch management</li>
+                        <li>Data loss prevention</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Managed IT Services -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>💻 Managed IT Services</h2>
+                <p>Complete IT infrastructure management and support</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Managed Network Services</h3>
+                    <p>Proactive network management</p>
+                    <ul>
+                        <li>24/7 monitoring</li>
+                        <li>Performance optimization</li>
+                        <li>Capacity planning</li>
+                        <li>Configuration management</li>
+                        <li>Troubleshooting & support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Help Desk Support</h3>
+                    <p>Expert technical support for your team</p>
+                    <ul>
+                        <li>Multi-tier support</li>
+                        <li>Ticket management</li>
+                        <li>Remote assistance</li>
+                        <li>User training</li>
+                        <li>Knowledge base</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Cloud Migration</h3>
+                    <p>Seamless transition to the cloud</p>
+                    <ul>
+                        <li>Assessment & planning</li>
+                        <li>Application migration</li>
+                        <li>Data migration</li>
+                        <li>Hybrid solutions</li>
+                        <li>Post-migration support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI & Automation -->
+        <div class="services-category">
+            <div class="category-title">
+                <h2>🤖 AI & Automation Services</h2>
+                <p>Intelligent systems to transform your business operations</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Process Automation</h3>
+                    <p>Automate repetitive tasks</p>
+                    <ul>
+                        <li>Robotic Process Automation</li>
+                        <li>Workflow optimization</li>
+                        <li>Business process management</li>
+                        <li>Integration platforms</li>
+                        <li>API development</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Machine Learning</h3>
+                    <p>Predictive analytics and insights</p>
+                    <ul>
+                        <li>Custom ML models</li>
+                        <li>Predictive maintenance</li>
+                        <li>Fraud detection</li>
+                        <li>Customer analytics</li>
+                        <li>Demand forecasting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>AI-Powered Solutions</h3>
+                    <p>Intelligent business applications</p>
+                    <ul>
+                        <li>Chatbots & virtual assistants</li>
+                        <li>Natural language processing</li>
+                        <li>Computer vision</li>
+                        <li>Recommendation engines</li>
+                        <li>Sentiment analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how our services can meet your specific needs</p>
+            <a href="contact.html" class="cta-button">Get Started</a>
+            <a href="tel:+18887658301" class="cta-button">📞 Call (888) 765-8301</a>
+            <a href="https://solveforceapp.github.io/SOLVEFORCE.COM/" class="cta-button">📚 Documentation</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SolveForce. Enterprise Telecommunications & IT Solutions.</p>
+        <div class="contact-info">
+            <a href="tel:+18887658301">📞 (888) 765-8301</a>
+            <a href="mailto:contact@solveforce.com">📧 contact@solveforce.com</a>
+            <a href="https://solveforceapp.github.io/SOLVEFORCE.COM/">📖 Documentation</a>
+        </div>
+    </footer>
+</body>
+</html>
